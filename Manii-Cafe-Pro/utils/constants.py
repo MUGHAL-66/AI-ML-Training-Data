@@ -1,0 +1,23 @@
+APP_NAME = "MANII CAFE PRO"
+APP_VERSION = "2.0.0"
+CURRENCY = "Rs"
+
+ROLE_ADMIN = "Admin"
+ROLE_CASHIER = "Cashier"
+ROLE_BARISTA = "Barista"
+
+ORDER_PENDING = "Pending"
+ORDER_PREPARING = "Preparing"
+ORDER_READY = "Ready"
+ORDER_COMPLETED = "Completed"
+ORDER_CANCELLED = "Cancelled"
+
+ORDER_DINE_IN = "Dine In"
+ORDER_TAKEAWAY = "Takeaway"
+ORDER_DELIVERY = "Delivery"
+
+PAYMENT_CASH = "Cash"
+PAYMENT_CARD = "Card"
+PAYMENT_DIGITAL = "Digital"
+
+DEFAULT_TAX_PERCENTAGE = 5.0
