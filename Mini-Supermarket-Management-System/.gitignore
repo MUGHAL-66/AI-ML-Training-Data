@@ -1,0 +1,19 @@
+# Python environments and generated files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local database files contain changing inventory and customer sales.
+data/*.db
+data/*.db-*
+data/*.sqlite
+data/*.sqlite3
+!data/.gitkeep
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

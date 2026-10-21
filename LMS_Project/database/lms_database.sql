@@ -1,0 +1,1 @@
+-- LMS database schema.

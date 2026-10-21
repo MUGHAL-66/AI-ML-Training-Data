@@ -1,0 +1,385 @@
+{
+  "n_rows": 1000,
+  "default_rate": 0.3,
+  "best_model": "Logistic Regression",
+  "threshold": 0.44,
+  "cv_table": {
+    "Logistic Regression": {
+      "Accuracy": 0.6838,
+      "Precision": 0.4821,
+      "Recall": 0.7292,
+      "F1": 0.5804,
+      "AUC-ROC": 0.7681,
+      "Selection score": 0.6926
+    },
+    "Decision Tree": {
+      "Accuracy": 0.6112,
+      "Precision": 0.4213,
+      "Recall": 0.7917,
+      "F1": 0.5499,
+      "AUC-ROC": 0.7017,
+      "Selection score": 0.6811
+    },
+    "Random Forest": {
+      "Accuracy": 0.7462,
+      "Precision": 0.5683,
+      "Recall": 0.6417,
+      "F1": 0.6027,
+      "AUC-ROC": 0.795,
+      "Selection score": 0.6798
+    },
+    "SVM (RBF)": {
+      "Accuracy": 0.7462,
+      "Precision": 0.6225,
+      "Recall": 0.3917,
+      "F1": 0.4808,
+      "AUC-ROC": 0.7773,
+      "Selection score": 0.5499
+    }
+  },
+  "test_table_at_0.5": {
+    "Logistic Regression": {
+      "Accuracy": 0.725,
+      "Precision": 0.5275,
+      "Recall": 0.8,
+      "F1": 0.6358,
+      "AUC-ROC": 0.8035
+    },
+    "Decision Tree": {
+      "Accuracy": 0.605,
+      "Precision": 0.4228,
+      "Recall": 0.8667,
+      "F1": 0.5683,
+      "AUC-ROC": 0.697
+    },
+    "Random Forest": {
+      "Accuracy": 0.77,
+      "Precision": 0.5972,
+      "Recall": 0.7167,
+      "F1": 0.6515,
+      "AUC-ROC": 0.8048
+    },
+    "SVM (RBF)": {
+      "Accuracy": 0.8,
+      "Precision": 0.7273,
+      "Recall": 0.5333,
+      "F1": 0.6154,
+      "AUC-ROC": 0.829
+    }
+  },
+  "final_metrics": {
+    "Accuracy": 0.61,
+    "Precision": 0.425,
+    "Recall": 0.85,
+    "F1": 0.5666666666666667,
+    "AUC-ROC": 0.8034523809523809
+  },
+  "final_metrics_at_0.5": {
+    "Accuracy": 0.725,
+    "Precision": 0.5274725274725275,
+    "Recall": 0.8,
+    "F1": 0.6357615894039735,
+    "AUC-ROC": 0.8034523809523809
+  },
+  "ci": {
+    "Recall": [
+      0.7540920554854981,
+      0.9394385026737968
+    ],
+    "F1": [
+      0.47308807538963393,
+      0.6455266955266955
+    ],
+    "AUC-ROC": [
+      0.7307071023056425,
+      0.8668889428697824
+    ]
+  },
+  "confusion_matrix": [
+    [
+      71,
+      69
+    ],
+    [
+      9,
+      51
+    ]
+  ],
+  "impact": {
+    "bad_debt_ratio_before": 0.38911455908613996,
+    "bad_debt_ratio_after": 0.16578707998234823,
+    "defaulted_principal_before": 280001.0,
+    "defaulted_principal_after": 36817.0,
+    "principal_protected": 243184.0,
+    "principal_protected_pct": 0.868511183888629,
+    "approval_rate": 0.4,
+    "good_customers_rejected_pct": 0.4928571428571429,
+    "lost_margin": 25432.700000000004,
+    "net_benefit": 217751.3
+  },
+  "impact_strict": {
+    "bad_debt_ratio_after": 0.06740071937165089,
+    "approval_rate": 0.14,
+    "good_customers_rejected_pct": 0.8071428571428572,
+    "recall": 0.9833333333333333,
+    "principal_protected_pct": 0.9836036299870358,
+    "net_benefit": 237804.0
+  },
+  "policies": [
+    {
+      "index": "Approve everyone (no model)",
+      "approval_rate": 1.0,
+      "good_customers_rejected": 0.0,
+      "defaults_caught (recall)": 0.0,
+      "bad_debt_ratio": 0.38911455908613996,
+      "defaulted_principal": 280001.0,
+      "lost_margin": 0.0,
+      "principal_protected": 0.0,
+      "principal_protected_pct": 0.0,
+      "net_benefit_vs_no_model": 0.0
+    },
+    {
+      "index": "Balanced (threshold 0.44)",
+      "approval_rate": 0.4,
+      "good_customers_rejected": 0.4928571428571429,
+      "defaults_caught (recall)": 0.85,
+      "bad_debt_ratio": 0.16578707998234823,
+      "defaulted_principal": 36817.0,
+      "lost_margin": 25432.700000000004,
+      "principal_protected": 243184.0,
+      "principal_protected_pct": 0.868511183888629,
+      "net_benefit_vs_no_model": 217751.3
+    },
+    {
+      "index": "Strict (threshold 0.28)",
+      "approval_rate": 0.14,
+      "good_customers_rejected": 0.8071428571428572,
+      "defaults_caught (recall)": 0.9833333333333333,
+      "bad_debt_ratio": 0.06740071937165089,
+      "defaulted_principal": 4591.0,
+      "lost_margin": 37605.99999999999,
+      "principal_protected": 275410.0,
+      "principal_protected_pct": 0.9836036299870358,
+      "net_benefit_vs_no_model": 237804.0
+    }
+  ],
+  "strict_threshold": 0.28,
+  "top_features": {
+    "has_checking": 0.128,
+    "months_loan_duration": 0.0405,
+    "purpose": 0.0171,
+    "installment_rate": 0.0148,
+    "credit_history": 0.0121,
+    "has_savings": 0.0111,
+    "checking_balance": 0.0086,
+    "age": 0.0085,
+    "log_savings": 0.008,
+    "log_amount": 0.0073
+  },
+  "bands": [
+    {
+      "band": "Auto-approve",
+      "applicants": 82,
+      "default_rate": 0.1098,
+      "share_of_volume": 0.41
+    },
+    {
+      "band": "Manual review",
+      "applicants": 73,
+      "default_rate": 0.3151,
+      "share_of_volume": 0.365
+    },
+    {
+      "band": "Auto-reject",
+      "applicants": 45,
+      "default_rate": 0.6222,
+      "share_of_volume": 0.225
+    }
+  ],
+  "band_cutoffs": [
+    0.44216869742585047,
+    0.6164305058104835
+  ],
+  "sensitivity": [
+    {
+      "LGD": "50%",
+      "margin": "5%",
+      "Balanced: net benefit": 108876,
+      "Strict: net benefit": 118902
+    },
+    {
+      "LGD": "50%",
+      "margin": "10%",
+      "Balanced: net benefit": 96159,
+      "Strict: net benefit": 100099
+    },
+    {
+      "LGD": "50%",
+      "margin": "20%",
+      "Balanced: net benefit": 70727,
+      "Strict: net benefit": 62493
+    },
+    {
+      "LGD": "100%",
+      "margin": "5%",
+      "Balanced: net benefit": 230468,
+      "Strict: net benefit": 256607
+    },
+    {
+      "LGD": "100%",
+      "margin": "10%",
+      "Balanced: net benefit": 217751,
+      "Strict: net benefit": 237804
+    },
+    {
+      "LGD": "100%",
+      "margin": "20%",
+      "Balanced: net benefit": 192319,
+      "Strict: net benefit": 200198
+    }
+  ],
+  "fairness_gender": [
+    {
+      "gender": "female",
+      "n": 61,
+      "reject_rate": 0.607,
+      "actual_default_rate": 0.328,
+      "good_customers_wrongly_rejected": 0.463,
+      "defaults_caught (recall)": 0.9
+    },
+    {
+      "gender": "male",
+      "n": 139,
+      "reject_rate": 0.597,
+      "actual_default_rate": 0.288,
+      "good_customers_wrongly_rejected": 0.505,
+      "defaults_caught (recall)": 0.825
+    }
+  ],
+  "fairness_age": [
+    {
+      "age_group": "<=25",
+      "n": 44,
+      "reject_rate": 0.705,
+      "actual_default_rate": 0.455,
+      "good_customers_wrongly_rejected": 0.583,
+      "defaults_caught (recall)": 0.85
+    },
+    {
+      "age_group": "26-35",
+      "n": 66,
+      "reject_rate": 0.682,
+      "actual_default_rate": 0.318,
+      "good_customers_wrongly_rejected": 0.6,
+      "defaults_caught (recall)": 0.857
+    },
+    {
+      "age_group": "36-50",
+      "n": 61,
+      "reject_rate": 0.492,
+      "actual_default_rate": 0.23,
+      "good_customers_wrongly_rejected": 0.362,
+      "defaults_caught (recall)": 0.929
+    },
+    {
+      "age_group": "50+",
+      "n": 29,
+      "reject_rate": 0.483,
+      "actual_default_rate": 0.172,
+      "good_customers_wrongly_rejected": 0.458,
+      "defaults_caught (recall)": 0.6
+    }
+  ],
+  "auc_with_sensitive": 0.7982142857142858,
+  "auc_without_sensitive": 0.8034523809523809,
+  "assumptions": {
+    "LGD": 1.0,
+    "margin": 0.1
+  },
+  "curves": {
+    "threshold": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "recall": [
+      1.0,
+      1.0,
+      1.0,
+      0.9958,
+      0.9875,
+      0.9542,
+      0.9333,
+      0.875,
+      0.8042,
+      0.7292,
+      0.6208,
+      0.45,
+      0.2917,
+      0.15,
+      0.0458,
+      0.0125,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "f1": [
+      0.4615,
+      0.4615,
+      0.4629,
+      0.4663,
+      0.4857,
+      0.5083,
+      0.5463,
+      0.5615,
+      0.5753,
+      0.5804,
+      0.5731,
+      0.5106,
+      0.4082,
+      0.25,
+      0.0863,
+      0.0247,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "good_rejected": [
+      1.0,
+      1.0,
+      0.9946,
+      0.975,
+      0.8911,
+      0.7714,
+      0.6357,
+      0.5321,
+      0.425,
+      0.3357,
+      0.2339,
+      0.1339,
+      0.0589,
+      0.0214,
+      0.0071,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+}
